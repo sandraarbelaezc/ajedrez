@@ -38,3 +38,12 @@ class ajedrez():
         for i in posiciones:
             self.tablero[i[0]][i[1]] = 1
         return self.tablero
+    
+    def mov_rey(self,x,y):
+        '''argumentos de entrada: x,y posición del rey en el tablero
+        retorna: los movimientos que puede hacer el rey'''
+        
+        movimientos = [(x+1,y),(x-1,y),(x,y+1),(x,y-1),(x-1,y-1),(x-1,y+1),(x+1,y+1),(x+1,y-1)]
+        self.tablero = self.pintar_mov_1(movimientos)
+        print("Rey")
+        print(self.tablero)
