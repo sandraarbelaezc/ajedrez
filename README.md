@@ -9,6 +9,5 @@ _Este código, se ejecuta desde el main.py_
 ```
 python main.py
 ```
-_Se ingresa el nombre de la pieza en minúscula, así: *rey, reina, torre, alfil, caballo, peon*.
-_Si desea para la ejecución ingrese: *s*.
-_También se ingresa la posición de la pieza en el tablero, que va desde 0 hasta 7, así: ej. *2,8*, la fila 2 y la columna 8._
+Se ingresa el nombre de la pieza en minúscula, así: *rey, reina, torre, alfil, caballo, peon*, si desea parar la ejecución ingrese: *s*.
+También se ingresa la posición de la pieza en el tablero, que va desde 0 hasta 7, así: ej. *2,8*, la fila 2 y la columna 8._
