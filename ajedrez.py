@@ -71,3 +71,19 @@ class ajedrez():
         self.tablero = self.pintar_mov_2(movimientos)
         print("Alfil")
         print(self.tablero)
+    
+    def mov_reina(self,x,y):
+        '''argumentos de entrada: x,y posición de la reina en el tablero
+        retorna: los movimientos que puede hacer la reina'''
+        
+        movimientos = [[(x+i,y) for i in range(1,7) if x+i <= 7],
+                        [(x,y+i) for i in range(1,7) if y+i <= 7],
+                        [(x-i,y) for i in range(1,7) if x-i >= 0],
+                        [(x,y-i) for i in range(1,7) if y-i >= 0],
+                        [(x-i,y-i) for i in range(1,7) if x-i >= 0 and y-i >= 0],
+                        [(x-i,y+i) for i in range(1,7) if x-i >= 0 and y+i <= 7],
+                        [(x+i,y-i) for i in range(1,7) if x+i <= 7 and y-i >=0],
+                        [(x+i,y+i) for i in range(1,7) if x+i <= 7 and y+i <= 7]]
+        self.tablero = self.pintar_mov_2(movimientos)
+        print("Reina")
+        print(self.tablero)
