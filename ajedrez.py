@@ -13,6 +13,10 @@ class ajedrez():
         self.tablero[x][y] = 8
     
     def pintar_mov_1(self, movimientos):
+        '''argumentos de entrada: una lista con los posibles movimientos de la pieza
+        retorna: el tablero con los movimientos marcados en 1, la posición de la ficha
+        en 8 y el resto en 0'''
+
         posiciones = []
         for i in movimientos:
             if i[0] >=0 and i[1] >=0:
@@ -22,6 +26,10 @@ class ajedrez():
         return self.tablero
     
     def pintar_mov_2(self, movimientos):
+        '''argumentos de entrada: una lista con los posibles movimientos de la pieza
+        retorna: el tablero con los movimientos marcados en 1, la posición de la ficha
+        en 8 y el resto en 0'''
+
         posiciones = []
         for i in movimientos:
             for j in i:
