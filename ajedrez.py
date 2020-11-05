@@ -87,3 +87,12 @@ class ajedrez():
         self.tablero = self.pintar_mov_2(movimientos)
         print("Reina")
         print(self.tablero)
+    
+    def mov_caballo(self,x,y):
+        '''argumentos de entrada: x,y posición del caballo en el tablero
+        retorna: los movimientos que puede hacer el caballo'''
+
+        movimientos = [(x+1,y-2),(x+2,y-1),(x+2,y+1),(x+1,y+2),(x-1,y+2),(x-2,y+1),(x-2,y-1),(x-1,y-2)]
+        self.tablero = self.pintar_mov_1(movimientos)
+        print("Caballo")
+        print(self.tablero)
