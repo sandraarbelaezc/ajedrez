@@ -17,3 +17,24 @@ def menu():
             return (pieza,x,y)
     except:
         print("Fin")
+
+while(True):
+
+    pieza, x, y = menu()
+    juego = ajedrez(pieza, y, x)
+
+    if pieza == "s":
+        print("Fin")
+        break
+    elif pieza == "rey":
+        juego.mov_rey(y,x)
+    elif pieza == "reina":
+        juego.mov_reina(y,x)
+    elif pieza == "alfil":
+        juego.mov_alfil(y,x)
+    elif pieza == "torre":
+        juego.mov_torre(y,x)
+    elif pieza == "caballo":
+        juego.mov_caballo(y,x)
+    elif pieza == "peon":
+        juego.mov_peon(y,x)
