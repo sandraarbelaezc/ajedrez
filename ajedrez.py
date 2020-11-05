@@ -42,8 +42,20 @@ class ajedrez():
     def mov_rey(self,x,y):
         '''argumentos de entrada: x,y posición del rey en el tablero
         retorna: los movimientos que puede hacer el rey'''
-        
+
         movimientos = [(x+1,y),(x-1,y),(x,y+1),(x,y-1),(x-1,y-1),(x-1,y+1),(x+1,y+1),(x+1,y-1)]
         self.tablero = self.pintar_mov_1(movimientos)
         print("Rey")
+        print(self.tablero)
+    
+    def mov_torre(self,x,y):
+        '''argumentos de entrada: x,y posición de la torre en el tablero
+        retorna: los movimientos que puede hacer la torre'''
+
+        movimientos = [[(x+i,y) for i in range(1,7) if x+i <= 7],
+                        [(x,y+i) for i in range(1,7) if y+i <= 7],
+                        [(x-i,y) for i in range(1,7) if x-i >= 0],
+                        [(x,y-i) for i in range(1,7) if y-i >= 0]]
+        self.tablero = self.pintar_mov_2(movimientos)
+        print("Torre")
         print(self.tablero)
