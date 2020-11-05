@@ -59,3 +59,15 @@ class ajedrez():
         self.tablero = self.pintar_mov_2(movimientos)
         print("Torre")
         print(self.tablero)
+    
+    def mov_alfil(self,x,y):
+        '''argumentos de entrada: x,y posición del alfil en el tablero
+        retorna: los movimientos que puede hacer el alfil'''
+
+        movimientos = [[(x-i,y-i) for i in range(1,7) if x-i >= 0 and y-i >= 0],
+                        [(x-i,y+i) for i in range(1,7) if x-i >= 0 and y+i <= 7],
+                        [(x+i,y-i) for i in range(1,7) if x+i <= 7 and y-i >=0],
+                        [(x+i,y+i) for i in range(1,7) if x+i <= 7 and y+i <= 7]]
+        self.tablero = self.pintar_mov_2(movimientos)
+        print("Alfil")
+        print(self.tablero)
